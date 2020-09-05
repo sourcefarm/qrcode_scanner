@@ -46,10 +46,12 @@ public class SecondActivity extends AppCompatActivity {
         backLayout = findViewById(R.id.scan_back);
         photoLayout = findViewById(R.id.choose_photo);
 
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        sensorEventListener = new LightSensorEventListener(lightLayout);
+        // sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        // lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        // sensorEventListener = new LightSensorEventListener(lightLayout);
 
+        lightLayout.setVisibility(View.INVISIBLE);  //추가
+        
         initView();
     }
 
